@@ -31,5 +31,5 @@ pip3 install numpy
 pip3 install google
 pip3 install libxml2-python3
 pip3 install --upgrade google-api-python-client
-
+cd n2n && ./autogen.sh && ./configure && make && make install
 
