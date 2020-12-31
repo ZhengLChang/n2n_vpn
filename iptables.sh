@@ -32,7 +32,9 @@ iptables -t nat -A POSTROUTING -d 10.10.10.1 -p tcp --dport 500 -j SNAT --to-sou
 #iptables -t nat -I POSTROUTING -p udp --dport 500 -j MASQUERADE
 #iptables -t nat -I POSTROUTING -p tcp --dport 500 -j MASQUERADE
 #iptables -t nat -I POSTROUTING -p tcp --dport 8888 -j MASQUERADE
-service iptables save
-service iptables restart
+iptables-save > /etc/iptables.rules
+iptables-restore < /etc/iptables.rules
+#service iptables save
+#service iptables restart
 iptables -t nat -nL
 #iptables -t nat -L -vn
