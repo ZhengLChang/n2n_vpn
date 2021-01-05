@@ -1,0 +1,1 @@
+ssserver -p 9999 -k $password$ -d start
